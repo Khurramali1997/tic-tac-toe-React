@@ -4,19 +4,19 @@ const Board = () => {
   return (
     <div>
       <div>
-        <Square>Hello World</Square>
-        <Square></Square>
-        <Square></Square>
+        <Square value={1} />
+        <Square value={1} />
+        <Square value={1} />
       </div>
       <div>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
+        <Square value={2} />
+        <Square value={2} />
+        <Square value={2} />
       </div>
       <div>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
+        <Square value={3} />
+        <Square value={3} />
+        <Square value={3} />
       </div>
     </div>
   );

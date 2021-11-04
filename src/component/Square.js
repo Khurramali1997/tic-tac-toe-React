@@ -1,6 +1,7 @@
 import React from "react";
-const Square = () => {
-  return <button type="button">1</button>;
+const Square = (param) => {
+  console.log(param);
+  return <button type="button">{param.value}</button>;
 };
 
 export default Square;
