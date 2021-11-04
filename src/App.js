@@ -1,10 +1,13 @@
 import React from "react";
-import Board from "./component/Board";
+import Board from "./components/Board";
+import "./style/style.scss";
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="app">
+      <h1 className="gameName">Tic Tac Toe</h1>
+      <label htmlFor="gameName">By Khurrum Ali</label>
+      <br />
       <Board></Board>
     </div>
   );
