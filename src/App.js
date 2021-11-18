@@ -40,9 +40,13 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1 className="gameName">Tic Tac Toe</h1>
-      <label htmlFor="gameName">By Khurrum Ali</label>
+    <div style={{ fontFamily: "cursive" }} className="app">
+      <h1 className="gameName" style={{ fontFamily: "cursive" }}>
+        Tic <span className="text-green">Tac</span> Toe
+      </h1>
+      <label htmlFor="gameName" style={{ fontFamily: "cursive" }}>
+        By Khurrum Ali
+      </label>
       <br />
       <StatusMessage winner={winner} current={current} />
       <Board
@@ -50,10 +54,16 @@ function App() {
         handleSquareClick={handleSquareClick}
         winningBlocks={winningBlocks}
       />
-      <button type="button" onClick={newGameBtn}>
+      <button
+        type="button"
+        className={`btn-reset ${winner ? "active" : ""}`}
+        onClick={newGameBtn}
+      >
         New Game
       </button>
-      <History history={history} moveTo={moveTo} />
+      <h2 style={{ fontFamily: "cursive" }}>History</h2>
+      <History history={history} moveTo={moveTo} currentMove={currentMove} />
+      <div className="bg-balls"></div>
     </div>
   );
 }
