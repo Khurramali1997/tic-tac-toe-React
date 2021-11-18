@@ -1,5 +1,5 @@
 #Link to the game 
-Open(http://https://tic-tac-toe-khurrum.surge.sh/)
+  (https://tic-tac-toe-khurrum.surge.sh/)
 
 # Information about the game
 
