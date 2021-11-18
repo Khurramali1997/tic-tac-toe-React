@@ -1,3 +1,6 @@
+#Link to the game 
+Open(http://https://tic-tac-toe-khurrum.surge.sh/)
+
 # Information about the game
 
 Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O. This is a digital version of the same. The algorithm and logic is written in JavaScript
