@@ -1,10 +1,9 @@
 import React from "react";
 //import "./style.square.css";
-const Square = (param, children) => {
-  console.log(param.value);
+const Square = ({ value, onClick }) => {
   return (
-    <button type="button" className="square">
-      {param.value}
+    <button type="button" className="square" onClick={onClick}>
+      {value}
     </button>
   );
 };
