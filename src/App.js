@@ -5,14 +5,14 @@ import StatusMessage from "./components/StatusMessage";
 import "./style/style.scss";
 import { calculateWinner } from "./winner";
 
+const begin = [{ board: Array(9).fill(null), isXNext: true }];
+
 function App() {
-  const [history, setHistory] = useState([
-    { board: Array(9).fill(null), isXNext: true },
-  ]);
+  const [history, setHistory] = useState(begin);
   const [currentMove, setCurrentMove] = useState(0);
 
   const current = history[currentMove];
-  const winner = calculateWinner(current.board);
+  const { winner, winningBlocks } = calculateWinner(current.board);
 
   const handleSquareClick = (position) => {
     if (current.board[position] || winner) {
@@ -34,6 +34,10 @@ function App() {
   const moveTo = (index) => {
     setCurrentMove(index);
   };
+  const newGameBtn = () => {
+    setHistory(begin);
+    setCurrentMove(0);
+  };
 
   return (
     <div className="app">
@@ -41,7 +45,14 @@ function App() {
       <label htmlFor="gameName">By Khurrum Ali</label>
       <br />
       <StatusMessage winner={winner} current={current} />
-      <Board board={current.board} handleSquareClick={handleSquareClick} />
+      <Board
+        board={current.board}
+        handleSquareClick={handleSquareClick}
+        winningBlocks={winningBlocks}
+      />
+      <button type="button" onClick={newGameBtn}>
+        New Game
+      </button>
       <History history={history} moveTo={moveTo} />
     </div>
   );

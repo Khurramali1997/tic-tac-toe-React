@@ -1,8 +1,13 @@
 import React from "react";
 //import "./style.square.css";
-const Square = ({ value, onClick }) => {
+const Square = ({ value, onClick, isWinningBlock }) => {
   return (
-    <button type="button" className="square" onClick={onClick}>
+    <button
+      type="button"
+      className="square"
+      onClick={onClick}
+      style={{ fontWeight: isWinningBlock ? "bold" : "normal" }}
+    >
       {value}
     </button>
   );
